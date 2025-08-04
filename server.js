@@ -11,10 +11,7 @@ const app = express()
 
 await connectCloudinary()
 
-app.use(cors({
-      origin: "https://regal-travesseiro-1fd8ac.netlify.app/ai",  // or '*' for testing only
-  credentials: true
-}))
+app.use(cors())
 app.use(express.json())
 app.use(clerkMiddleware())
 
